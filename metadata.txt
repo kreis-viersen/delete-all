@@ -9,6 +9,7 @@ author=Kreis Viersen
 email=open@kreis-viersen.de
 tracker=https://github.com/kreis-viersen/delete-all
 repository=https://github.com/kreis-viersen/delete-all
+homepage=https://github.com/kreis-viersen/delete-all
 icon=delete_all.png
 server=False
 deprecated=False
