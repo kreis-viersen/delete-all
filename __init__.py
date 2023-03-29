@@ -19,6 +19,8 @@ QGIS plugin
 ***************************************************************************
 """
 
+
 def classFactory(iface):
     from .delete_all import DeleteAll
+
     return DeleteAll(iface)
