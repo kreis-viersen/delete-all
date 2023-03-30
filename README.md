@@ -6,3 +6,5 @@ Adds a toolbar icon to clear the layers widget with one click, e.g. useful when 
 ---
 
 QGIS-Plugin zum Löschen aller Gruppen und Layer im Layer-Fenster
+
+Fügt eine Schaltfläche in der Werkzeugleiste hinzu, mit welcher das Layer-Fenster mit einem Klick gelöscht werden kann.
