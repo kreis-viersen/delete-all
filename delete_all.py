@@ -61,6 +61,11 @@ class DeleteAll:
         )
         self.action.triggered.connect(self.deleteAll)
         self.aboutAction.triggered.connect(self.about)
+        
+        self.action.setShortcut(self.tr('Ctrl+Alt+D'))
+        self.action.setToolTip(
+            '<b>' + self.action.toolTip() + '</b><br>' + self.tr('(Ctrl+Alt+D)')
+        )
 
         self.menu = QMenu(self.tr("&delete-all"))
         self.menu.setIcon(QIcon(os.path.join(self.plugin_dir, "delete_all.png")))
