@@ -21,6 +21,7 @@ QGIS plugin
 
 import os
 from qgis.core import QgsProject
+from qgis.gui import QgsGui
 from qgis.PyQt.QtCore import QCoreApplication, QSettings, QTranslator
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import QAction, QMenu, QMessageBox
@@ -61,11 +62,10 @@ class DeleteAll:
         )
         self.action.triggered.connect(self.deleteAll)
         self.aboutAction.triggered.connect(self.about)
-        
-        self.action.setShortcut(self.tr('Ctrl+Alt+D'))
-        self.action.setToolTip(
-            '<b>' + self.action.toolTip() + '</b><br>' + self.tr('(Ctrl+Alt+D)')
-        )
+
+        self.iface.registerMainWindowAction(self.action, self.tr("Ctrl+Alt+D"))
+        if self.action.shortcut().isEmpty() and QgsGui.shortcutsManager().actionForSequence(self.tr("Ctrl+Alt+D")) is None:
+            QgsGui.shortcutsManager().setObjectKeySequence(self.action, self.tr("Ctrl+Alt+D"))
 
         self.menu = QMenu(self.tr("&delete-all"))
         self.menu.setIcon(QIcon(os.path.join(self.plugin_dir, "delete_all.png")))
@@ -77,6 +77,7 @@ class DeleteAll:
     def unload(self):
         self.iface.removePluginMenu(self.tr("&delete-all"), self.action)
         self.iface.removePluginMenu(self.tr("&delete-all"), self.aboutAction)
+        self.iface.unregisterMainWindowAction(self.action)
 
         del self.action
         del self.toolbar
