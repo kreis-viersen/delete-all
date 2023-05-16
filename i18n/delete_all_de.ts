@@ -4,29 +4,34 @@
 <context>
     <name>DeleteAll</name>
     <message>
-        <location filename="../delete_all.py" line="70"/>
+        <location filename="../delete_all.py" line="86"/>
         <source>delete-all</source>
         <translation>alles-löschen</translation>
     </message>
     <message>
-        <location filename="../delete_all.py" line="64"/>
+        <location filename="../delete_all.py" line="79"/>
         <source>&amp;delete-all</source>
         <translation>&amp;alles-löschen</translation>
     </message>
     <message>
-        <location filename="../delete_all.py" line="70"/>
+        <location filename="../delete_all.py" line="86"/>
         <source>QGIS plugin to delete all groups and layers from the layer widget</source>
         <translation>QGIS-Plugin zum Löschen aller Gruppen und Layer im Layer-Fenster</translation>
     </message>
     <message>
-        <location filename="../delete_all.py" line="73"/>
+        <location filename="../delete_all.py" line="95"/>
         <source>About delete-all</source>
         <translation>Über alles-löschen</translation>
     </message>
     <message>
-        <location filename="../delete_all.py" line="50"/>
+        <location filename="../delete_all.py" line="58"/>
         <source>&amp;About delete-all</source>
         <translation>&amp;Über alles-löschen</translation>
+    </message>
+    <message>
+        <location filename="../delete_all.py" line="68"/>
+        <source>Ctrl+Alt+D</source>
+        <translation>Strg+Alt+D</translation>
     </message>
 </context>
 </TS>
