@@ -3,8 +3,9 @@ name=Delete all
 description=QGIS plugin to delete all groups and layers from the layers widget
 about=Adds a toolbar icon to clear the layers widget with one click, e.g. useful when developing and testing QGIS models.
 tags=delete,development,layer,layertree,layers,remove,tool,toolbar
-version=1.1.0
+version=1.1.1
 qgisMinimumVersion=3.16
+qgisMaximumVersion=4.99
 author=Kreis Viersen
 email=open@kreis-viersen.de
 tracker=https://github.com/kreis-viersen/delete-all
@@ -14,7 +15,9 @@ icon=delete_all.png
 server=False
 deprecated=False
 supportsQt6=True
-changelog=v1.1.0:
+changelog=v1.1.1:
+    - Update plugin metadata
+    v1.1.0:
     - Support Qt6 / QGIS 4
     v1.0.1:
     - Fix blurry toolbar icon
